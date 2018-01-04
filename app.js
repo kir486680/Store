@@ -16,7 +16,7 @@ var routes = require('./routes/index');
 var userRoutes = require('./routes/user');
 
 var app = express();
-mongoose.connect('mongodb://<kir486680>:<My2ndmail>@ds237947.mlab.com:37947/storeitems');
+mongoose.connect('mongodb://kir486680:My2ndmail@ds237947.mlab.com:37947/storeitems');
 require('./config/passport');
 
 // view engine setup
