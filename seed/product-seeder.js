@@ -3,7 +3,12 @@ var Product = require('../models/product');
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://kir486680:My2ndmail@ds237947.mlab.com:37947/storeitems', { useMongoClient: true });
+
+mongoose.connect("mongodb://kir486680:My2ndmail@ds163806.mlab.com:63806/chattext", { useMongoClient: true } ,function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
 
 var products = [
     new Product({
