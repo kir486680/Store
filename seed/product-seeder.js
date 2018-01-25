@@ -2,7 +2,8 @@ var Product = require('../models/product');
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://kir486680@gmail.com:My2ndmail@ds237947.mlab.com:37947/storeitems');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://kir486680:My2ndmail@ds237947.mlab.com:37947/storeitems', { useMongoClient: true });
 
 var products = [
     new Product({
